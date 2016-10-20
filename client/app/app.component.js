@@ -10,21 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 //import { ROUTER_DIRECTIVES } from '@angular/router';
-var $ = require('/foundation/js/vendor/jquery.js');
-var foundation = require('/foundation/js/vendor/foundation.js');
 var AppComponent = (function () {
-    function AppComponent(el) {
-        this.el = el;
+    function AppComponent() {
     }
-    AppComponent.prototype.ngAfterViewInit = function () {
-        $(this.el.nativeElement.ownerDocument).foundation();
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'teste.html',
+            templateUrl: 'app/index.html',
+            //directives: [ ROUTER_DIRECTIVES ],
+            styleUrls: ['bootstrap/css/bootstrap.min.css', 'bootstrap/css/teleduc.css']
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
