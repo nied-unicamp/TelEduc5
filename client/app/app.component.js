@@ -10,19 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 //import { ROUTER_DIRECTIVES } from '@angular/router';
-var AppComponent = (function () {
-    function AppComponent() {
+var NgbdButtonsRadio = (function () {
+    function NgbdButtonsRadio() {
+        this.model = 1;
     }
-    AppComponent = __decorate([
+    NgbdButtonsRadio = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/index.html',
-            //directives: [ ROUTER_DIRECTIVES ],
-            styleUrls: ['bootstrap/css/bootstrap.min.css', 'bootstrap/css/teleduc.css']
+            selector: 'ngbd-buttons-radio',
+            template: "<div [(ngModel)]=\"model\" ngbRadioGroup name=\"radioBasic\">\n                <label class=\"btn btn-primary\">\n                    <input type=\"radio\" [value]=\"1\"> Left (pre-checked)\n                </label>\n                <label class=\"btn btn-primary\">\n                    <input type=\"radio\" value=\"middle\"> Middle\n                </label>\n                <label class=\"btn btn-primary\">\n                    <input type=\"radio\" [value]=\"false\"> Right\n                </label>\n            </div>\n            <hr>\n            <pre>{{model}}</pre>\n            ",
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], NgbdButtonsRadio);
+    return NgbdButtonsRadio;
 }());
-exports.AppComponent = AppComponent;
+exports.NgbdButtonsRadio = NgbdButtonsRadio;
+// @Component({
+//     selector: 'my-app',
+//     templateUrl: 'app/index.html',
+//     //directives: [ ROUTER_DIRECTIVES ],
+//     styleUrls: ['bootstrap/css/bootstrap.min.css', 'bootstrap/css/teleduc.css']
+//  })
+// export class AppComponent {
+// }
 //# sourceMappingURL=app.component.js.map

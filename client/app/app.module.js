@@ -10,15 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
+var forms_1 = require('@angular/forms');
+//import { AppComponent }   from './app.component';
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [ng_bootstrap_1.NgbModule.forRoot(), platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [
+                app_component_1.NgbdButtonsRadio],
+            bootstrap: [
+                app_component_1.NgbdButtonsRadio]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
