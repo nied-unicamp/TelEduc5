@@ -12,18 +12,41 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 var forms_1 = require('@angular/forms');
-//import { AppComponent }   from './app.component';
 var app_component_1 = require('./app.component');
+var tab_component_1 = require('./tab.component');
+var mural_component_1 = require('./mural.component');
+var task_component_1 = require('./task.component');
+var people_component_1 = require('./people.component');
+var tools_component_1 = require('./tools.component');
+var header_teleduc_component_1 = require('./header-teleduc.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [ng_bootstrap_1.NgbModule.forRoot(), platform_browser_1.BrowserModule, forms_1.FormsModule],
+            imports: [
+                ng_bootstrap_1.NgbModule.forRoot(),
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule
+            ],
             declarations: [
-                app_component_1.NgbdButtonsRadio],
+                app_component_1.Teleduc,
+                tab_component_1.NgbdTabsetBasic,
+                mural_component_1.MuralComponent,
+                task_component_1.TaskComponent,
+                people_component_1.PeopleComponent,
+                tools_component_1.ToolsComponent,
+                header_teleduc_component_1.HeaderTeleduc
+            ],
             bootstrap: [
-                app_component_1.NgbdButtonsRadio]
+                app_component_1.Teleduc,
+                tab_component_1.NgbdTabsetBasic,
+                mural_component_1.MuralComponent,
+                task_component_1.TaskComponent,
+                people_component_1.PeopleComponent,
+                tools_component_1.ToolsComponent,
+                header_teleduc_component_1.HeaderTeleduc
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

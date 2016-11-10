@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Teleduc = (function () {
-    function Teleduc() {
+var PeopleComponent = (function () {
+    function PeopleComponent() {
     }
-    Teleduc = __decorate([
+    PeopleComponent = __decorate([
         core_1.Component({
-            selector: 'teleduc',
-            template: "\n        <header-teleduc></header-teleduc>\n        <div class=\"row\" id=\"content\">\n            <div class=\"col-xs-3\" id=\"left-menu\">\n                <tools></tools>\n            </div>\n            <div class=\"col-xs-9\" id=\"left-menu\">\n                <ngbd-tabset-basic></ngbd-tabset-basic>\n            </div>\n        </div>\n  "
+            selector: 'people-page',
+            templateUrl: 'app/people.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], Teleduc);
-    return Teleduc;
+    ], PeopleComponent);
+    return PeopleComponent;
 }());
-exports.Teleduc = Teleduc;
-//# sourceMappingURL=app.component.js.map
+exports.PeopleComponent = PeopleComponent;
+//# sourceMappingURL=people.component.js.map

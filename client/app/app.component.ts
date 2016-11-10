@@ -1,33 +1,17 @@
-import { Component } from '@angular/core';
-//import { ROUTER_DIRECTIVES } from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'ngbd-buttons-radio',
-  template: `<div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
-                <label class="btn btn-primary">
-                    <input type="radio" [value]="1"> Left (pre-checked)
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" value="middle"> Middle
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" [value]="false"> Right
-                </label>
+  selector: 'teleduc',
+  template: `
+        <header-teleduc></header-teleduc>
+        <div class="row" id="content">
+            <div class="col-xs-3" id="left-menu">
+                <tools></tools>
             </div>
-            <hr>
-            <pre>{{model}}</pre>
-            `,
+            <div class="col-xs-9" id="left-menu">
+                <ngbd-tabset-basic></ngbd-tabset-basic>
+            </div>
+        </div>
+  `
 })
-export class NgbdButtonsRadio {
-  model = 1;
-}
-
-// @Component({
-//     selector: 'my-app',
-//     templateUrl: 'app/index.html',
-//     //directives: [ ROUTER_DIRECTIVES ],
-//     styleUrls: ['bootstrap/css/bootstrap.min.css', 'bootstrap/css/teleduc.css']
-//  })
-// export class AppComponent {
-
-// }
+export class Teleduc { }

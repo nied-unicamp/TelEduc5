@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Teleduc = (function () {
-    function Teleduc() {
+var NgbdTabsetBasic = (function () {
+    function NgbdTabsetBasic() {
     }
-    Teleduc = __decorate([
+    NgbdTabsetBasic = __decorate([
         core_1.Component({
-            selector: 'teleduc',
-            template: "\n        <header-teleduc></header-teleduc>\n        <div class=\"row\" id=\"content\">\n            <div class=\"col-xs-3\" id=\"left-menu\">\n                <tools></tools>\n            </div>\n            <div class=\"col-xs-9\" id=\"left-menu\">\n                <ngbd-tabset-basic></ngbd-tabset-basic>\n            </div>\n        </div>\n  "
+            selector: 'ngbd-tabset-basic',
+            templateUrl: 'app/tabset-basic.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], Teleduc);
-    return Teleduc;
+    ], NgbdTabsetBasic);
+    return NgbdTabsetBasic;
 }());
-exports.Teleduc = Teleduc;
-//# sourceMappingURL=app.component.js.map
+exports.NgbdTabsetBasic = NgbdTabsetBasic;
+//# sourceMappingURL=tab.component.js.map
