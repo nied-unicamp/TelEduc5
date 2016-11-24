@@ -1,4 +1,6 @@
 client/system-config.js*
+client/npm-debug.log
+client/typings
 client/app/**/*.js
 client/app/**/*.map
 client/node_modules
