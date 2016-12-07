@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'teleduc',
+  styleUrls: ['bootstrap/css/teleduc.css'],
   template: `
         <header-teleduc></header-teleduc>
         <div class="row" id="content">
