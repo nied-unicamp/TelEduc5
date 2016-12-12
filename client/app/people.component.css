@@ -1,0 +1,63 @@
+.well {
+    background-color: #f5f5f5;
+    margin-top: 1em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    border: solid 2px #e0e0e0;
+}
+
+#name {
+    background-color: #fff;
+    display: inline-block;
+    border: solid 2px #e0e0e0;
+    border-radius: 2px;
+    padding: 0px 0.5em;
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+div {
+    text-align: center;
+}
+
+#person {
+    background-color: #fff;
+    display: inline-block;
+    border: solid 2px #e0e0e0;
+    border-radius: 1em;
+    padding: 0px 0.5em;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+button {
+    color: #444;
+    margin: 0px;
+    padding: 0px;
+}
+
+button:hover {
+    color: #000;
+}
+
+i {
+    font-size: 90px;
+}
+
+img {
+    border-radius: 5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#title {
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+}

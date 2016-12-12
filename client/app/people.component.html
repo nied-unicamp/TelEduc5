@@ -1,129 +1,27 @@
-<div class="row">
-        <div class="panel panel-default">
-            
-            <div class="panel-heading">
-                <h3 class="panel-title">GRUPO 1</h3>
-            </div>
-
-            <div class="panel-body">
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="panel panel-default">
-            
-            <div class="panel-heading">
-                <h3 class="panel-title">GRUPO 2</h3>
-            </div>
-
-            <div class="panel-body">
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="panel panel-default">
-
-            <div class="panel-body">
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-4 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="http://placehold.it/80x80&text=[img]" alt="...">
-                    </a>
-                </div>
-            </div>
-        </div>
+<!--<div class="well">
+    <div class="col-xs-4 col-md-2">
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+            <i class="material-icons">add_circle_outline</i>
+        </button>
     </div>
+    <div *ngFor="let person of data" class="col-xs-4 col-md-2">
+        <a href="#">
+            <img src="http://placehold.it/80x80&text=[img]" alt="...">
+        </a>
+        <div id="name">{{person.nome}}</div>
+    </div>
+</div>-->
+
+<div class="well">
+    <div class="container-fluid col-xs-4 col-md-2" id="person">
+        <template ngbModalContainer></template>
+        <ngbd-modal-basic></ngbd-modal-basic>
+        <span>Adicionar</span>
+    </div>
+    <div *ngFor="let person of data" class="col-xs-4 col-md-2" id="person">
+        <a href="#">
+            <img src="http://placehold.it/80x80&text=[img]" alt="...">
+        </a>
+        <span>{{person.nome}}</span>
+    </div>
+</div>

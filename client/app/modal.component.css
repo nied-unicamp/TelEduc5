@@ -1,0 +1,40 @@
+#add {
+    color: #c0c0c0;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 2px;
+}
+
+#add:hover {
+    color: #000;
+}
+
+#submit {
+    background-color: #444;
+    color: #fff;
+    border-color: #333;
+    padding: 5px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+i {
+    font-size: 90px;
+}
+
+#InputName {
+    width: 7em;
+}
+
+#InputLastName {
+    width: 7em;
+}
+
+#InputEmail {
+    width: 20em;
+}
+
+label {
+    font-size: 1em;
+    margin-left: 1em;
+}

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'task-page',
-  styleUrls: ['bootstrap/css/teleduc.css'],
+  styleUrls: ['app/task.component.css'],
   templateUrl: 'app/task.component.html'
 })
 export class TaskComponent { }

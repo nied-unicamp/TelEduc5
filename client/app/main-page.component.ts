@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'main-page',
-  styleUrls: ['bootstrap/css/teleduc.css'],
+  // styleUrls: [''],
   templateUrl: 'app/main-page.html'
 })
 export class MainPage { }

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'ngbd-tabset-basic',
-  styleUrls: ['bootstrap/css/teleduc.css'],
-  templateUrl: 'app/tabset-basic.html'
+  // styleUrls: [''],
+  templateUrl: 'app/tab.component.html'
 })
 export class NgbdTabsetBasic { }
