@@ -1,6 +1,7 @@
 /* tslint:disable: member-ordering forin */
 import { Component, OnInit }                  from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Headers, RequestOptions } from '@angular/http';
 
 import { User }                   from '../shared/user';
 import { forbiddenNameValidator } from '../shared/forbidden-name.directive';

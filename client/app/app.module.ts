@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { HttpModule }    from '@angular/http';
+import { HttpModule, JsonpModule }    from '@angular/http';
 import { Teleduc } from './app.component';
 
 import { NgbdTabsetBasic }   from './tab.component';
@@ -22,7 +22,8 @@ import { HeroFormReactiveModule } from './reactive/hero-form-reactive.module';
                   BrowserModule,
                   FormsModule,
                   HeroFormReactiveModule,
-                  HttpModule
+                  HttpModule,
+                  JsonpModule
                 ],
   
   declarations: [ 

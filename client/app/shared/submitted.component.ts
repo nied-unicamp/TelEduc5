@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Headers, RequestOptions } from '@angular/http';
 
 import { User } from './user';
+import { Observable }     from 'rxjs/Observable';
 
 @Component({
   selector: 'user-submitted',

@@ -6,10 +6,10 @@ import {Component} from '@angular/core';
   template: `
         <header-teleduc></header-teleduc>
         <div class="row" id="content">
-            <div class="col-xs-3" id="left-menu">
+            <div class="col-xs-2" id="left-menu">
                 <tools></tools>
             </div>
-            <div class="col-xs-9" id="left-menu">
+            <div class="col-xs-7" id="main-content">
                 <ngbd-tabset-basic></ngbd-tabset-basic>
             </div>
         </div>
