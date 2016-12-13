@@ -19,6 +19,11 @@ import { User } from './user';
     </div>
     <hr>
     <div class="row">
+      <div class="col-xs-3">Login</div>
+      <div class="col-xs-9 pull-left">{{ user.login }}</div>
+    </div>
+    <hr>
+    <div class="row">
       <div class="col-xs-3">Email</div>
       <div class="col-xs-9 pull-left">{{ user.email }}</div>
     </div>

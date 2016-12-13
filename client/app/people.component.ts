@@ -23,7 +23,7 @@ export class PeopleComponent {
     }
  
     getData(){
-        this.http.get('http://localhost/AngularPHP/')
+        this.http.get('http://localhost:8000/usuarios')
         		.subscribe(res => this.data = res.json());
     }
  }

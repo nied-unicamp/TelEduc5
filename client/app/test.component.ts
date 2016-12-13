@@ -8,7 +8,7 @@ import {Injectable, Component } from '@angular/core';
 //   templateUrl: 'app/test.component.html'
   template: `<ul>
                 <li *ngFor="let person of data">
-                {{person.id}} - {{person.nome}} {{person.sobrenome}}
+                {{person.ID}} - {{person.Nome}} {{person.Sobrenome}}
                 </li>
 	        </ul>`
 })
@@ -24,7 +24,7 @@ export class TestComponent {
     }
  
     getData(){
-        this.http.get('http://localhost/AngularPHP/')
+        this.http.get('http://localhost/teste.php')
         		.subscribe(res => this.data = res.json());
     }
 }

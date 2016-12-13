@@ -12,7 +12,7 @@ import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
 })
 export class HeroFormReactiveComponent implements OnInit {
 
-  user = new User('Abdullah', 'Souza', 'Abdullah@hotmail.com');
+  user = new User('Abdullah', 'Souza', 'A21', 'Abdullah@hotmail.com');
 
   submitted = false;
 
@@ -27,7 +27,7 @@ export class HeroFormReactiveComponent implements OnInit {
   // TODO: Workaround until NgForm has a reset method (#6822)
   active = true;
   addUser() {
-    this.user = new User('', '', '');
+    this.user = new User('', '', '', '');
     this.buildForm();
 
     this.active = false;
@@ -51,6 +51,7 @@ export class HeroFormReactiveComponent implements OnInit {
         ]
       ],
       'lastname': [this.user.lastname],
+      'login': [this.user.login],
       'email':    [this.user.email, Validators.required]
     });
 
