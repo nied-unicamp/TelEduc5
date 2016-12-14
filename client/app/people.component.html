@@ -18,10 +18,10 @@
         <ngbd-modal-basic></ngbd-modal-basic>
         <span>Adicionar</span>
     </div>
-    <div *ngFor="let person of data" class="col-xs-4 col-md-2" id="person">
+    <div *ngFor="let person of users" class="col-xs-4 col-md-2" id="person">
         <a href="#">
             <img src="http://placehold.it/80x80&text=[img]" alt="...">
         </a>
-        <span>{{person.Nome}}</span>
+        <span>{{person}}</span>
     </div>
 </div>

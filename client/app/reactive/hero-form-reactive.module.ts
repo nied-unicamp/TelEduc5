@@ -3,10 +3,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule }              from '../shared/shared.module';
 import { HeroFormReactiveComponent } from './hero-form-reactive.component';
+// import { UserService } from './user.service';
 
 @NgModule({
   imports:      [ SharedModule, ReactiveFormsModule ],
-  declarations: [ HeroFormReactiveComponent ],
+  declarations: [ 
+                  HeroFormReactiveComponent
+                  // UserService
+                ],
   exports:      [ HeroFormReactiveComponent ]
 })
 export class HeroFormReactiveModule { }

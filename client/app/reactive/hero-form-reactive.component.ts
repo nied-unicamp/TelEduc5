@@ -1,7 +1,8 @@
-/* tslint:disable: member-ordering forin */
 import { Component, OnInit }                  from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Headers, RequestOptions } from '@angular/http';
+import { Http, Response } from '@angular/http';
+
 
 import { User }                   from '../shared/user';
 import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
@@ -13,6 +14,8 @@ import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
 })
 export class HeroFormReactiveComponent implements OnInit {
 
+  private userAddUrl = 'http://localhost:8000/add/usuario';
+
   user = new User('Abdullah', 'Souza', 'A21', 'Abdullah@hotmail.com');
 
   submitted = false;
@@ -22,12 +25,23 @@ export class HeroFormReactiveComponent implements OnInit {
     this.user = this.userForm.value;
   }
 
-  // Reset the form with a new hero AND restore 'pristine' class state
-  // by toggling 'active' flag which causes the form
-  // to be removed/re-added in a tick via NgIf
-  // TODO: Workaround until NgForm has a reset method (#6822)
+  // onSubmit() {
+  //   let headers = new Headers({ 'Content-Type': 'application/json' });
+  //   let options = new RequestOptions({ headers: headers });
+  //   this.user = this.userForm.value;
+
+  //   return this.http.post(this.userAddUrl, this.user | json, options);
+  // }
+
+  // AddUser(name: string, lastName: string, login: string, email: string) {
+  //    let headers = new Headers({ 'Content-Type': 'application/json' });
+  //   let options = new RequestOptions({ headers: headers });
+
+  //   return this.http.post(this.userAddUrl, {"nome": name,"sobrenome": lastName,"login": login,"email": email}, options);
+  // }
+
   active = true;
-  addUser() {
+  newUser() {
     this.user = new User('', '', '', '');
     this.buildForm();
 
@@ -36,7 +50,7 @@ export class HeroFormReactiveComponent implements OnInit {
   }
 
   userForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http:Http) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -59,7 +73,7 @@ export class HeroFormReactiveComponent implements OnInit {
     this.userForm.valueChanges
       .subscribe(data => this.onValueChanged(data));
 
-    this.onValueChanged(); // (re)set validation messages now
+    this.onValueChanged();
   }
 
 
@@ -68,7 +82,7 @@ export class HeroFormReactiveComponent implements OnInit {
     const form = this.userForm;
 
     for (const field in this.formErrors) {
-      // clear previous error message (if any)
+      
       this.formErrors[field] = '';
       const control = form.get(field);
 
@@ -98,10 +112,3 @@ export class HeroFormReactiveComponent implements OnInit {
     }
   };
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

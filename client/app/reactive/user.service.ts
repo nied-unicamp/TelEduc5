@@ -1,36 +1,38 @@
 import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, JsonpModule } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 
 import { User }           from '../shared/user';
 import { Observable }       from 'rxjs/Observable';
 
 @Injectable()
-export class HeroService {
+export class UserService {
   private userAddUrl = 'http://localhost:8000/add/usuario';
-  private userGetUrl = 'http://localhost:8000/usuarios';
+  // private userGetUrl = 'http://localhost:8000/usuarios';
+  private userGetUrl = 'app/users.json';
 
   constructor (private http: Http) {}
 
-  getUsers (): Observable<User[]> {
+  getUsers () {
     return this.http.get(this.userGetUrl)
-                    .map(this.extractData)
-                    .catch(this.handleError);
+                    .map((response) => response.json());
+                    // .catch(this.handleError);
   }
 
-  addUser (name: string): Observable<User> {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.userAddUrl, { name }, options)
-                    .map(this.extractData)
-                    .catch(this.handleError);
-  }
+  // addUser (name: string): Observable<User> {
+  //   let headers = new Headers({ 'Content-Type': 'application/json' });
+  //   let options = new RequestOptions({ headers: headers });
 
-  private extractData(res: Response) {
-    let body = res.json();
-    return body.data || { };
-  }
+  //   return this.http.post(this.userAddUrl, { name }, options)
+  //                   .map(this.extractData)
+  //                   .catch(this.handleError);
+  // }
+
+  // private extractData(res: Response) {
+  //   let body = res.json();
+  //   return body.data || { };
+  // }
 
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
